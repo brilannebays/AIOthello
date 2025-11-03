@@ -35,7 +35,7 @@ def main():
     initBoard = board.create()
     board.display(initBoard)
 
-    newGame = Gameplay(player1, player2, initBoard)
+    newGame = Gameplay(player1, player2, board, initBoard)
     newGame.runGame()
 
 
