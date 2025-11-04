@@ -32,8 +32,8 @@ class Board:
                 matrix[i][9] = "V"
 
         # black is 0, white is 1
-        matrix[4][4], matrix[5][5] = 1, 1
-        matrix[4][5], matrix[5][4] = 0, 0
+        matrix[4][4], matrix[5][5] = "1", "1"
+        matrix[4][5], matrix[5][4] = "0", "0"
 
         return matrix
 
@@ -51,11 +51,13 @@ class Board:
 
         if pieceColor == "BLACK":
             # 1 indicates white
-            oppColor = 1
+            selfColor = "0"
+            oppColor = "1"
 
         else:
             # 0 indicated black
-            oppColor = 0
+            selfColor = "1"
+            oppColor = "0"
 
         for x, y in self.DIRECTIONS:
             foundOpp = False
@@ -63,7 +65,7 @@ class Board:
             xStep = row
             yStep = column
 
-
+            # keep taking steps unless we reach the bounds, encounter an empty space, or reach our own color
             while True:
                 xStep += x
                 yStep += y 
@@ -76,7 +78,7 @@ class Board:
                     numOpps += 1
                     continue
 
-                if matrix[xStep][yStep] == pieceColor:
+                if matrix[xStep][yStep] == selfColor:
                     if foundOpp and numOpps > 0:
                         xStepBack = xStep
                         yStepBack = yStep
@@ -86,18 +88,32 @@ class Board:
                             piecesToFlip.append((xStepBack, yStepBack))
                     break
 
+        #print(piecesToFlip)
         return piecesToFlip
 
     def updateBoard(self, matrix, pieceColor, flippingArray, row, column):
         if pieceColor == "BLACK":
-            selfColor = 0
+            selfColor = "0"
         else:
-            selfColor = 1
+            selfColor = "1"
 
         matrix[row][column] = selfColor
 
         for x, y in flippingArray:
             matrix[x][y] = selfColor
+
+    def score(self, matrix):
+        black = 0
+        white = 0
+
+        for i in range(10):
+            for j in range(10):
+                if matrix[i][j] == "0":
+                    black += 1
+                elif matrix[i][j] == "1":
+                    white += 1
+        
+        print("BLACK: " + str(black) + "     WHITE: " + str(white))
 
         
 

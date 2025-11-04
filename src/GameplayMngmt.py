@@ -19,12 +19,24 @@ class Gameplay:
     
     def runGame(self):
         running = True
+        currentPlayer = self.player1
+        nextPlayer = self.player2
 
         while running:
-            row, column = self.player1.move(self.matrix)
-            toFlip = self.board.legalize(self.matrix, self.player1.color, row, column)
-            self.board.updateBoard(self.matrix, self.player1.color, toFlip, row, column)
-            self.board.display(self.matrix)
+            row, column = currentPlayer.move(self.matrix)
+            toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
 
-            move2 = self.player2.move(self.matrix)
-        
+            if len(toFlip) == 0:
+                print("Invalid move. Please try again. ")
+                continue
+
+            self.board.updateBoard(self.matrix, currentPlayer.color, toFlip, row, column)
+            self.board.display(self.matrix)
+            self.board.score(self.matrix)
+            print(" ")
+
+            temp = currentPlayer
+            currentPlayer = nextPlayer
+            nextPlayer = temp
+
+
