@@ -115,6 +115,9 @@ class Board:
         
         print("BLACK: " + str(black) + "     WHITE: " + str(white))
 
+    def getPotentialMoves(self, matrix, pieceColor):
+        pass
+
         
 
                         
