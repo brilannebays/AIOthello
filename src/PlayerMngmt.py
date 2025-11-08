@@ -1,4 +1,4 @@
-
+from MovePrediction import minimax
 class Player:
     def __init__(self, identity, color, boardObj):
         self.identity = identity.upper()

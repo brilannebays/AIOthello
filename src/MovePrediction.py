@@ -6,3 +6,6 @@
 # - Alpha Beta Pruning
 # - Heuristic: corner moves should be scored higher
 # - Decide and return best move
+
+def minimax():
+    

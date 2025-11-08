@@ -9,6 +9,7 @@
 # - display scores
 # - display winner and loser
 # - manage turns 
+from MovePrediction import minimax
 
 class Gameplay:
     def __init__(self, player1, player2, boardObject, initializedBoard):
@@ -42,6 +43,7 @@ class Gameplay:
 
             elif currentPlayer.identity == "AI":
                 someList = currentPlayer.move(self.matrix)
+                score, bestMove = minimax(self.matrix, 3, True, )
                 print(str(someList))
 
                 temp = currentPlayer
