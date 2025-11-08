@@ -115,8 +115,66 @@ class Board:
         
         print("BLACK: " + str(black) + "     WHITE: " + str(white))
 
+    # find every single move available to a piece color currently on the board
     def getPotentialMoves(self, matrix, pieceColor):
-        pass
+        potentialMoves = []
+        if pieceColor == "BLACK":
+            # 1 indicates white
+            selfColor = "0"
+            oppColor = "1"
+
+        else:
+            # 0 indicated black
+            selfColor = "1"
+            oppColor = "0"
+
+        # look at every spot on the board
+        for i in range(1, 9):
+            for j in range(1, 9):
+
+                # we're only looking at our pieces
+                #print("We're looking at piece: " + str(i) + str(j))
+                if (matrix[i][j] == "-") or (matrix[i][j] == oppColor):
+                    continue
+                
+                if (matrix[i][j] == selfColor):
+                    #print("We've found our piece at " + str(i) + str(j))
+                    # when we've found one of our pieces, check every direction of that piece
+                    for x, y in self.DIRECTIONS:
+                        xStep = i
+                        yStep = j
+                        opps = 0
+
+                        while True:
+                            xStep += x 
+                            yStep += y 
+                            emptySpotCoords = []
+
+                            # stop stepping when you hit the boarder or our own piece
+                            if (matrix[xStep][yStep]) == "V" or (matrix[xStep][yStep] == selfColor):
+                                #print("We stepped on the boarder or ourself")
+                                #print(str(xStep) + str(yStep))
+                                break 
+
+                            # yay, an open spot! we'll add this to potential moves
+                            if matrix[xStep][yStep] == "-":
+                                if opps > 0:
+                                    emptySpotCoords.append(xStep)
+                                    emptySpotCoords.append(yStep)
+                                    #print(str(emptySpotCoords))
+                                    potentialMoves.append(emptySpotCoords)
+                                    break 
+                                if opps == 0:
+                                    break
+
+
+                            # opponent color? keep looking
+                            if matrix[xStep][yStep] == oppColor:
+                                #print("We've stepped on an opp")
+                                opps +=1
+                                continue
+
+        return potentialMoves
 
         
 

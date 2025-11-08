@@ -1,8 +1,9 @@
 
 class Player:
-    def __init__(self, identity, color):
+    def __init__(self, identity, color, boardObj):
         self.identity = identity.upper()
         self.color = color.upper()
+        self.board = boardObj
 
     def move(self, matrix):
         '''
@@ -51,4 +52,5 @@ class Player:
 
 
         if self.identity == "AI":
-            return
+            possibleMoves = self.board.getPotentialMoves(matrix, self.color)
+            return possibleMoves

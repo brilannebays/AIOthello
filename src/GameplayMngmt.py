@@ -23,20 +23,30 @@ class Gameplay:
         nextPlayer = self.player2
 
         while running:
-            row, column = currentPlayer.move(self.matrix)
-            toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
+            if currentPlayer.identity == "SELF":
+                row, column = currentPlayer.move(self.matrix)
+                toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
 
-            if len(toFlip) == 0:
-                print("Invalid move. Please try again. ")
-                continue
+                if len(toFlip) == 0:
+                    print("Invalid move. Please try again. ")
+                    continue
 
-            self.board.updateBoard(self.matrix, currentPlayer.color, toFlip, row, column)
-            self.board.display(self.matrix)
-            self.board.score(self.matrix)
-            print(" ")
+                self.board.updateBoard(self.matrix, currentPlayer.color, toFlip, row, column)
+                self.board.display(self.matrix)
+                self.board.score(self.matrix)
+                print(" ")
 
-            temp = currentPlayer
-            currentPlayer = nextPlayer
-            nextPlayer = temp
+                temp = currentPlayer
+                currentPlayer = nextPlayer
+                nextPlayer = temp
+
+            elif currentPlayer.identity == "AI":
+                someList = currentPlayer.move(self.matrix)
+                print(str(someList))
+
+                temp = currentPlayer
+                currentPlayer = nextPlayer
+                nextPlayer = temp
+
 
 
