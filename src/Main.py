@@ -12,8 +12,6 @@ from PlayerMngmt import Player
 from GameplayMngmt import Gameplay
 
 def main():
-    board = Board()
-    initBoard = board.create()
 
     print("Welcome to Othello. ")
     print("Would you like to play against SELF or AI?")
@@ -28,12 +26,14 @@ def main():
 
         # player1 will always be first because player1 always has BLACK
         if pieceColor == "BLACK":
-            player2 = Player(opponent, "WHITE", board)
-            player1 = Player("SELF", pieceColor, board)
+            player2 = Player(opponent, "WHITE")
+            player1 = Player("SELF", pieceColor)
         else:
-            player1 = Player(opponent, "BLACK", board)
-            player2 = Player("SELF", pieceColor, board)
+            player1 = Player(opponent, "BLACK")
+            player2 = Player("SELF", pieceColor)
 
+    board = Board()
+    initBoard = board.create()
     board.display(initBoard)
 
     newGame = Gameplay(player1, player2, board, initBoard)

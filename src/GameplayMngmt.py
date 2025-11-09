@@ -10,6 +10,7 @@
 # - display winner and loser
 # - manage turns 
 from MovePrediction import minimax
+import copy 
 
 class Gameplay:
     def __init__(self, player1, player2, boardObject, initializedBoard):
@@ -37,18 +38,33 @@ class Gameplay:
                 self.board.score(self.matrix)
                 print(" ")
 
-                temp = currentPlayer
-                currentPlayer = nextPlayer
-                nextPlayer = temp
-
             elif currentPlayer.identity == "AI":
-                someList = currentPlayer.move(self.matrix)
-                score, bestMove = minimax(self.matrix, 3, True, )
-                print(str(someList))
+                print(currentPlayer.identity + "thinking...")
 
-                temp = currentPlayer
-                currentPlayer = nextPlayer
-                nextPlayer = temp
+                copyCurrentMatrix = copy.deepcopy(self.matrix)
+
+                evaluation, bestMove = minimax(copyCurrentMatrix, 4, True, -999999, 999999, currentPlayer.color)
+
+                if bestMove:
+                    print(str(bestMove))
+                    row = bestMove[0]
+                    column = bestMove[1]
+                    toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
+
+                    if len(toFlip) == 0:
+                        print("Invalid move. Please try again. ")
+                        continue
+
+                    self.board.updateBoard(self.matrix, currentPlayer.color, toFlip, row, column)
+                    self.board.display(self.matrix)
+                    self.board.score(self.matrix)
+                    print(" ")
+                else:
+                    print("There wasn't a best move")
+
+            temp = currentPlayer
+            currentPlayer = nextPlayer
+            nextPlayer = temp
 
 
 

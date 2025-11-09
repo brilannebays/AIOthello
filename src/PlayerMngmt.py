@@ -1,9 +1,8 @@
 from MovePrediction import minimax
 class Player:
-    def __init__(self, identity, color, boardObj):
+    def __init__(self, identity, color):
         self.identity = identity.upper()
         self.color = color.upper()
-        self.board = boardObj
 
     def move(self, matrix):
         '''
@@ -51,6 +50,4 @@ class Player:
                     continue
 
 
-        if self.identity == "AI":
-            possibleMoves = self.board.getPotentialMoves(matrix, self.color)
-            return possibleMoves
+        #if self.identity == "AI":
