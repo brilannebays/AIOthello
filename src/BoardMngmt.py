@@ -1,12 +1,4 @@
-# Brilanne Bays 
-# Desc:
-
-# TO-DO 
-# - keep track of piece colors 
-# - generate array of valid moves for EACH TURN
-# - Flip discs for a move
-# - Count pieces for scoring
-# - Print or return a visual of the board
+# Handles board, pieces, colors, and game mechanics (scoring, legalizing moves, predicting potential moves)
 
 class Board:
     def __init__(self):
@@ -22,6 +14,12 @@ class Board:
 
         ]
     
+    '''  
+        The border of the board is represented by V's
+        Black pieces are represented as 0's, because black always goes first
+        White pieces are represented as 1's, because white goes second
+        Note: Black and white are represented as strings to make value checking consistent. 
+    '''
     def create(self):
         matrix = [["-" for i in range(10)] for j in range(10)]
         for i in range(10):
@@ -37,6 +35,7 @@ class Board:
 
         return matrix
 
+    # displays the matrix
     def display(self, matrix):
         print("    1 2 3 4 5 6 7 8  ")
         lettering = [" ", "A", "B", "C", "D", "E", "F", "G", "H", " "]
@@ -78,6 +77,7 @@ class Board:
                     numOpps += 1
                     continue
 
+                # when we reach our own color, we step back inwards and keep note of every opposite color within the "bracket"
                 if matrix[xStep][yStep] == selfColor:
                     if foundOpp and numOpps > 0:
                         xStepBack = xStep
@@ -91,6 +91,7 @@ class Board:
         #print(piecesToFlip)
         return piecesToFlip
 
+    # put piece on the board and flip any opponent pieces
     def updateBoard(self, matrix, pieceColor, flippingArray, row, column):
         if pieceColor == "BLACK":
             selfColor = "0"
@@ -102,6 +103,7 @@ class Board:
         for x, y in flippingArray:
             matrix[x][y] = selfColor
 
+    # score is calculated by summing and displaying pieces on the board
     def score(self, matrix):
         black = 0
         white = 0
@@ -115,7 +117,7 @@ class Board:
         
         print("BLACK: " + str(black) + "     WHITE: " + str(white))
 
-    # find every single move available to a piece color currently on the board
+    # find every single move available to a piece color currently on the board. Can you tell I had trouble with this function?
     def getPotentialMoves(self, matrix, pieceColor):
         potentialMoves = []
         if pieceColor == "BLACK":

@@ -1,14 +1,5 @@
-# Brilanne Bays
-# Desc:
+# Handles gameplay, alternates players, runs the game
 
-# TO-DO:
-# - ask player for input
-# - check input validity 
-# - update board state after each move
-# - detect win/loss conditions
-# - display scores
-# - display winner and loser
-# - manage turns 
 from MovePrediction import minimax
 import copy 
 
@@ -24,7 +15,10 @@ class Gameplay:
         currentPlayer = self.player1
         nextPlayer = self.player2
 
+        # game loop
         while running:
+
+            # if player is the user, get and validate their move, update and display board, calculate score, and yield to next player
             if currentPlayer.identity == "SELF":
                 row, column = currentPlayer.move(self.matrix)
                 toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
@@ -38,15 +32,17 @@ class Gameplay:
                 self.board.score(self.matrix)
                 print(" ")
 
+            # if player is AI, copy current board, use mini max and alpha beta pruning to return a move, update board,
+            # calculate score, yield to next player
             elif currentPlayer.identity == "AI":
-                print(currentPlayer.identity + "thinking...")
+                print(currentPlayer.identity + " thinking...")
 
+                # original board will 'corrupt' if used in AI move calculation, so use a deep copy
                 copyCurrentMatrix = copy.deepcopy(self.matrix)
-
                 evaluation, bestMove = minimax(copyCurrentMatrix, 4, True, -999999, 999999, currentPlayer.color)
 
                 if bestMove:
-                    print(str(bestMove))
+                    #print(str(bestMove))
                     row = bestMove[0]
                     column = bestMove[1]
                     toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
@@ -59,9 +55,11 @@ class Gameplay:
                     self.board.display(self.matrix)
                     self.board.score(self.matrix)
                     print(" ")
-                else:
-                    print("There wasn't a best move")
 
+                else:
+                    print("There wasn't a move available. Yielding to other player...")
+
+            # pass over to next user
             temp = currentPlayer
             currentPlayer = nextPlayer
             nextPlayer = temp

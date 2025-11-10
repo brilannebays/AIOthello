@@ -1,23 +1,17 @@
-# Brilanne Bays
-# Desc:
-
-# TO-DO 
-# - Mini Max
-# - Alpha Beta Pruning
-# - Heuristic: corner moves should be scored higher
-# - Decide and return best move
-
+# The brains of the AI player. We'll run Minimax algorithm, alpha beta pruning, and corner + parity heuristic
 
 from BoardMngmt import Board
 
+# a tree of potential moves that returns the best possible move based on an heuristic score
 def minimax(matrix, depth, maximizingPlayer, alpha, beta, aiPieceColor):
 
-    # we return the score of the nodes at the final depth + an empty list to retain format of ()
+    # we return the score of the nodes at the final depth + an empty list to retain format of minimax return
     if depth == 0:
         return diskParity(matrix, aiPieceColor), []
 
     board = Board()
 
+    # maximizing player will always represent AI, due to heuristic scoring
     if maximizingPlayer:
         maxEval = -999999
         moves = board.getPotentialMoves(matrix, aiPieceColor)
@@ -37,16 +31,19 @@ def minimax(matrix, depth, maximizingPlayer, alpha, beta, aiPieceColor):
 
             alpha = max(alpha, val)
 
+            # the user has a better move than the AI, so will stop checking here, because AI will never choose the "better" move
             if beta <= alpha:
                 break
 
         return maxEval, bestMove
 
-
+    # minimizing player will always represent user
     else:
         minEval = 999999
         moves = board.getPotentialMoves(matrix, aiPieceColor)
         bestMove = []
+
+        # check if a move generates children moves recursively
         for move in moves:
             row = move[0]
             column = move[1]
@@ -54,12 +51,14 @@ def minimax(matrix, depth, maximizingPlayer, alpha, beta, aiPieceColor):
             board.updateBoard(matrix, aiPieceColor, toFlip, row, column)
             val, bestCurrentMove = minimax(matrix, depth - 1, True, alpha, beta, aiPieceColor)
 
+            # if val gives us a move with a lower score than the other children, we'll consider it our best move
             if val < minEval:
                 bestMove.append(row)
                 bestMove.append(column) 
 
             minEval = min(minEval, val)
 
+            # the user has a better move than the AI, so will stop checking here
             beta = min(beta, val)
             if beta <= alpha:
                 break
@@ -85,7 +84,7 @@ def diskParity(matrix, aiPieceColor):
             if matrix[i][j] == oppColor:
                 sumOpp += 1
     
-    # please forgive me for this Dr. Mike
+    # please forgive me for this Dr. Mike. We're giving each corner a greater value
     if matrix[1][1] == selfColor:
         sumSelf += 2
     elif matrix[1][1] == oppColor:

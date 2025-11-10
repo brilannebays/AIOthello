@@ -17,6 +17,9 @@ class Player:
 
                 getMove = input(f"Select move [letter][number] for {self.color}: ")
 
+                if getMove.upper() == "STOP":
+                    raise KeyboardInterrupt
+
                 row = getMove[0]
                 column = getMove[1]
 
