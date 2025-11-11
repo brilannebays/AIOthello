@@ -1,4 +1,5 @@
 from MovePrediction import minimax
+
 class Player:
     def __init__(self, identity, color):
         self.identity = identity.upper()
@@ -16,10 +17,6 @@ class Player:
             while True:
 
                 getMove = input(f"Select move [letter][number] for {self.color}: ")
-
-                if getMove.upper() == "STOP":
-                    raise KeyboardInterrupt
-
                 row = getMove[0]
                 column = getMove[1]
 
@@ -53,4 +50,30 @@ class Player:
                     continue
 
 
-        #if self.identity == "AI":
+    def askDebug(self):
+        while True:
+            debugInput = input("View AI move sequences? ")
+
+            if debugInput.upper() == "YES":
+                return True
+
+            elif debugInput.upper() == "NO":
+                return False
+
+            else:
+                print("Must type [yes] or [no]. ")
+                continue
+
+    def askPrune(self):
+        while True:
+            pruningInput = input("Switch alpha-beta pruning? ")
+            
+            if pruningInput.upper() == "YES":
+                return True
+
+            elif pruningInput.upper() == "NO":
+                return False
+
+            else:
+                print("Must type [yes] or [no]. ")
+                continue

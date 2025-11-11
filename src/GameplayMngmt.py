@@ -1,6 +1,6 @@
 # Handles gameplay, alternates players, runs the game
 
-from MovePrediction import minimax
+import MovePrediction
 import copy 
 
 class Gameplay:
@@ -14,32 +14,53 @@ class Gameplay:
         running = True
         currentPlayer = self.player1
         nextPlayer = self.player2
+        global statesExamined
+        debugBool = False
+        pruningSwitch = False
+        outputFile = "minimaxSequences.txt"
 
         # game loop
         while running:
 
             # if player is the user, get and validate their move, update and display board, calculate score, and yield to next player
             if currentPlayer.identity == "SELF":
-                row, column = currentPlayer.move(self.matrix)
-                toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
+                # To do: predict possible moves
+                listPotentialMoves = self.board.getPotentialMoves(self.matrix, currentPlayer.color)
+                
+                if len(listPotentialMoves) > 0:
+                    row, column = currentPlayer.move(self.matrix)
+                    toFlip = self.board.legalize(self.matrix, currentPlayer.color, row, column)
 
-                if len(toFlip) == 0:
-                    print("Invalid move. Please try again. ")
-                    continue
+                    if len(toFlip) == 0:
+                        print("Invalid move. Please try again. ")
+                        continue
 
-                self.board.updateBoard(self.matrix, currentPlayer.color, toFlip, row, column)
-                self.board.display(self.matrix)
-                self.board.score(self.matrix)
-                print(" ")
+                    self.board.updateBoard(self.matrix, currentPlayer.color, toFlip, row, column)
+                    self.board.display(self.matrix)
+                    self.board.score(self.matrix)
+                    print(" ")
+                
+                else:
+                    print("There wasn't a move available. Yielding to other player...")
 
             # if player is AI, copy current board, use mini max and alpha beta pruning to return a move, update board,
             # calculate score, yield to next player
             elif currentPlayer.identity == "AI":
+                debugBool = currentPlayer.askDebug()
+                pruningSwitch = currentPlayer.askPrune()
                 print(currentPlayer.identity + " thinking...")
+
+                MovePrediction.numStatesExamined = 0
 
                 # original board will 'corrupt' if used in AI move calculation, so use a deep copy
                 copyCurrentMatrix = copy.deepcopy(self.matrix)
-                evaluation, bestMove = minimax(copyCurrentMatrix, 4, True, -999999, 999999, currentPlayer.color)
+
+                if debugBool == False:
+                    evaluation, bestMove = MovePrediction.minimax(copyCurrentMatrix, 4, True, -999999, 999999, currentPlayer.color, None, debugBool, outputFile, pruningSwitch)
+                elif debugBool:
+                    evaluation, bestMove = MovePrediction.minimax(copyCurrentMatrix, 4, True, -999999, 999999, currentPlayer.color, [], debugBool, outputFile, pruningSwitch)
+
+                print(str(MovePrediction.numStatesExamined) + " number of states were examined. ")
 
                 if bestMove:
                     #print(str(bestMove))

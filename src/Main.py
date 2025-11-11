@@ -2,6 +2,7 @@
 # Student ID: 10393040
 # Date Due: 11/11/25
 # Date Completed: 11/8/25
+# Assignment #3
 # Description: Main is the entry point to the game Othello. A player is able to choose whether to play against themselves
 # or an AI player. The player can also choose to go first (black), or yield to AI (white). The program utilizes the 
 # Minimax algorithm with alpha-beta pruning for the AI. The player is allowed to exit the game at any point by typing 
@@ -10,15 +11,26 @@
 from BoardMngmt import Board
 from PlayerMngmt import Player
 from GameplayMngmt import Gameplay
+import os 
+import sys
+
+def restart():
+    python = sys.executable 
+    os.execl(python, python, *sys.argv)
 
 def main():
+    print()
     print("Welcome to Othello. ")
 
     while True:
+
         # validate user choice for opponent
         print("Would you like to play against SELF or AI?")
         opponent = input()
         print()
+
+        if opponent.upper() == "STOP":
+            restart()
 
         if opponent.upper() in ["AI", "SELF"]:
             print("Your opponent is " + opponent.upper() + ".")
@@ -26,24 +38,20 @@ def main():
             print("Invalid: must choose either SELF or AI.")
             continue
 
-        if opponent.upper() == "STOP":
-            raise KeyboardInterrupt
-
-
         # validate user choice for color
         print("Would you like to play BLACK or WHITE? Note that BLACK will go first.")
         pieceColor = input()
         print()
 
+        if pieceColor.upper() == "STOP":
+            restart()
+
         if pieceColor.upper() in ["BLACK", "WHITE"]:
             print("Your color is " + pieceColor.upper() + ".")
+            print()
         else:
             print("Invalid: must choose either BLACK or WHITE.")
             continue
-
-        if pieceColor.upper() == "STOP":
-            raise KeyboardInterrupt
-        
 
         # create the players
         if opponent.upper() in ["AI", "SELF"]:

@@ -1,0 +1,946 @@
+PS C:\Users\Bays\Documents\AI\AIOthello\ProjFolder\src> python Main.py
+
+Welcome to Othello.
+Would you like to play against SELF or AI?
+AI
+
+Your opponent is AI.
+Would you like to play BLACK or WHITE? Note that BLACK will go first.
+BLACK
+
+Your color is BLACK.
+
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - - 1 0 - - - V
+E V - - - 0 1 - - - V
+F V - - - - - - - - V
+G V - - - - - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+Select move [letter][number] for BLACK: D3
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V - - - 0 1 - - - V
+F V - - - - - - - - V
+G V - - - - - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 4     WHITE: 1
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+65 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V - - 1 1 1 - - - V
+F V - - - - - - - - V
+G V - - - - - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 3     WHITE: 3
+
+Select move [letter][number] for BLACK: C3
+Invalid move. Please try again.
+Select move [letter][number] for BLACK: F3
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V - - 0 0 1 - - - V
+F V - - 0 - - - - - V
+G V - - - - - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 6     WHITE: 1
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+112 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V - 1 1 1 1 - - - V
+F V - - 0 - - - - - V
+G V - - - - - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 4     WHITE: 4
+
+Select move [letter][number] for BLACK: F1
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V - 0 1 1 1 - - - V
+F V 0 - 0 - - - - - V
+G V - - - - - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 6     WHITE: 3
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+293 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V - 0 1 1 1 - - - V
+F V 0 - 1 - - - - - V
+G V - - 1 - - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 5     WHITE: 5
+
+Select move [letter][number] for BLACK: G4
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V - 0 1 1 1 - - - V
+F V 0 - 0 - - - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 7     WHITE: 4
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+245 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V - - 0 0 0 - - - V
+E V 1 1 1 1 1 - - - V
+F V 0 - 0 - - - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 6     WHITE: 6
+
+Select move [letter][number] for BLACK: D1
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - - - - - - - V
+D V 0 - 0 0 0 - - - V
+E V 0 0 1 1 1 - - - V
+F V 0 - 0 - - - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 9     WHITE: 4
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+96 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - 1 - - - - - V
+D V 0 - 1 1 0 - - - V
+E V 0 0 1 1 1 - - - V
+F V 0 - 0 - - - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 7     WHITE: 7
+
+Select move [letter][number] for BLACK: E6
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - 1 - - - - - V
+D V 0 - 1 1 0 - - - V
+E V 0 0 0 0 0 0 - - V
+F V 0 - 0 - - - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 11     WHITE: 4
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+323 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - - - - - - - V
+C V - - 1 - - - - - V
+D V 0 - 1 1 0 - - - V
+E V 0 0 0 1 0 0 - - V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 10     WHITE: 6
+
+Select move [letter][number] for BLACK: B3
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - - 0 - - - - - V
+D V 0 - 0 1 0 - - - V
+E V 0 0 0 1 0 0 - - V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 13     WHITE: 4
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1578 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - - 0 - - - - - V
+D V 0 - 0 1 1 1 - - V
+E V 0 0 0 1 0 0 - - V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 12     WHITE: 6
+
+Select move [letter][number] for BLACK: D7
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - - 0 - - - - - V
+D V 0 - 0 0 0 0 0 - V
+E V 0 0 0 1 0 0 - - V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 16     WHITE: 3
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1164 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - - 0 - - - - - V
+D V 0 - 0 0 0 0 0 - V
+E V 0 0 0 1 1 1 1 - V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 14     WHITE: 6
+
+Select move [letter][number] for BLACK: E8
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - - 0 - - - - - V
+D V 0 - 0 0 0 0 0 - V
+E V 0 0 0 0 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - - - - - - - V
+  V V V V V V V V V V
+BLACK: 19     WHITE: 2
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+576 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - - 0 - - - - - V
+D V 0 - 0 0 0 0 0 - V
+E V 0 0 0 0 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 1 - - - - V
+H V - - 1 - - - - - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 4
+
+Select move [letter][number] for BLACK: H5
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - - 0 - - - - - V
+D V 0 - 0 0 0 0 0 - V
+E V 0 0 0 0 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 3
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1066 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V - 1 0 - - - - - V
+D V 0 - 1 0 0 0 0 - V
+E V 0 0 0 1 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 6
+
+Select move [letter][number] for BLACK: C1
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V 0 0 0 - - - - - V
+D V 0 - 1 0 0 0 0 - V
+E V 0 0 0 1 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 5
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+762 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V 0 0 0 - - - - - V
+D V 0 - 1 1 1 1 1 1 V
+E V 0 0 0 1 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 16     WHITE: 10
+
+Select move [letter][number] for BLACK: C6
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V - - 0 - - - - - V
+C V 0 0 0 - - 0 - - V
+D V 0 - 1 1 0 0 0 1 V
+E V 0 0 0 0 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 21     WHITE: 6
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+983 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V 1 - 0 - - - - - V
+C V 0 1 0 - - 0 - - V
+D V 0 - 1 1 0 0 0 1 V
+E V 0 0 0 0 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 8
+
+Select move [letter][number] for BLACK: C5
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V 1 - 0 - - - - - V
+C V 0 1 0 - 0 0 - - V
+D V 0 - 1 0 0 0 0 1 V
+E V 0 0 0 0 0 0 0 0 V
+F V 0 - 0 - 1 - - - V
+G V - - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 22     WHITE: 7
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+659 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V 1 - 0 - - - - - V
+C V 1 1 0 - 0 0 - - V
+D V 1 - 1 0 0 0 0 1 V
+E V 1 0 0 0 0 0 0 0 V
+F V 1 - 0 - 1 - - - V
+G V 1 - 1 0 - - - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 12
+
+Select move [letter][number] for BLACK: G6
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V 1 - 0 - - - - - V
+C V 1 1 0 - 0 0 - - V
+D V 1 - 1 0 0 0 0 1 V
+E V 1 0 0 0 0 0 0 0 V
+F V 1 - 0 - 0 - - - V
+G V 1 - 1 0 - 0 - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 11
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1364 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V 1 - 0 - - - - - V
+C V 1 1 1 1 0 0 - - V
+D V 1 - 1 0 0 0 0 1 V
+E V 1 0 0 0 0 0 0 0 V
+F V 1 - 0 - 0 - - - V
+G V 1 - 1 0 - 0 - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 19     WHITE: 13
+
+Select move [letter][number] for BLACK: C8
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - - - - - - V
+B V 1 - 0 - - - - - V
+C V 1 1 1 1 0 0 - 0 V
+D V 1 - 1 0 0 0 0 0 V
+E V 1 0 0 0 0 0 0 0 V
+F V 1 - 0 - 0 - - - V
+G V 1 - 1 0 - 0 - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 21     WHITE: 12
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1132 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - 1 - - - - V
+B V 1 - 1 - - - - - V
+C V 1 1 1 1 0 0 - 0 V
+D V 1 - 1 0 0 0 0 0 V
+E V 1 0 0 0 0 0 0 0 V
+F V 1 - 0 - 0 - - - V
+G V 1 - 1 0 - 0 - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 14
+
+Select move [letter][number] for BLACK: B5
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - 1 - - - - V
+B V 1 - 1 - 0 - - - V
+C V 1 1 1 0 0 0 - 0 V
+D V 1 - 0 0 0 0 0 0 V
+E V 1 0 0 0 0 0 0 0 V
+F V 1 - 0 - 0 - - - V
+G V 1 - 1 0 - 0 - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 23     WHITE: 12
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+969 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - 1 - - - - V
+B V 1 - 1 - 0 - - - V
+C V 1 1 1 1 0 0 - 0 V
+D V 1 - 0 0 1 0 0 0 V
+E V 1 0 0 0 0 1 0 0 V
+F V 1 - 0 - 0 - 1 - V
+G V 1 - 1 0 - 0 - - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 16
+
+Select move [letter][number] for BLACK: G7
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - 1 - - - - V
+B V 1 - 1 - 0 - - - V
+C V 1 1 1 1 0 0 - 0 V
+D V 1 - 0 0 1 0 0 0 V
+E V 1 0 0 0 0 1 0 0 V
+F V 1 - 0 - 0 - 0 - V
+G V 1 - 1 0 - 0 0 - V
+H V - - 1 - 0 - - - V
+  V V V V V V V V V V
+BLACK: 22     WHITE: 15
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1185 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - 1 - - - - V
+B V 1 - 1 - 0 - - - V
+C V 1 1 1 1 0 0 - 0 V
+D V 1 - 1 0 1 0 0 0 V
+E V 1 0 0 1 0 1 0 0 V
+F V 1 - 0 - 1 - 0 - V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 20
+
+Select move [letter][number] for BLACK: F4
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - 1 - - - - V
+B V 1 - 1 - 0 - - - V
+C V 1 1 1 1 0 0 - 0 V
+D V 1 - 1 0 1 0 0 0 V
+E V 1 0 0 0 0 1 0 0 V
+F V 1 - 0 0 1 - 0 - V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 19
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+955 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - - 1 - - - - V
+B V 1 - 1 - 0 - - - V
+C V 1 1 1 1 0 0 - 0 V
+D V 1 - 1 1 1 0 0 0 V
+E V 1 0 0 0 1 1 0 0 V
+F V 1 - 0 0 1 1 0 - V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 22
+
+Select move [letter][number] for BLACK: A3
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - - 0 1 - - - - V
+B V 1 - 0 - 0 - - - V
+C V 1 1 0 1 0 0 - 0 V
+D V 1 - 0 1 1 0 0 0 V
+E V 1 0 0 0 1 1 0 0 V
+F V 1 - 0 0 1 1 0 - V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 22     WHITE: 19
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1759 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 - - - - V
+B V 1 - 1 - 0 - - - V
+C V 1 1 0 1 0 0 - 0 V
+D V 1 - 0 1 1 0 0 0 V
+E V 1 0 0 0 1 1 0 0 V
+F V 1 - 0 0 1 1 0 - V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 22
+
+Select move [letter][number] for BLACK: B4
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 - - - - V
+B V 1 - 1 0 0 - - - V
+C V 1 1 0 0 0 0 - 0 V
+D V 1 - 0 0 1 0 0 0 V
+E V 1 0 0 0 1 1 0 0 V
+F V 1 - 0 0 1 1 0 - V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 23     WHITE: 20
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+2081 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 - - - - V
+B V 1 - 1 1 0 - - - V
+C V 1 1 0 0 1 0 - 0 V
+D V 1 - 0 0 1 1 0 0 V
+E V 1 0 0 0 1 1 1 0 V
+F V 1 - 0 0 1 1 1 1 V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 26
+
+Select move [letter][number] for BLACK: C7
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 - - - - V
+B V 1 - 1 1 0 - - - V
+C V 1 1 0 0 1 0 0 0 V
+D V 1 - 0 0 1 0 0 0 V
+E V 1 0 0 0 0 1 1 0 V
+F V 1 - 0 0 1 1 1 1 V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 21     WHITE: 24
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+2237 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 - - - - V
+B V 1 - 1 1 1 1 - - V
+C V 1 1 0 0 1 1 0 0 V
+D V 1 - 0 0 1 1 0 0 V
+E V 1 0 0 0 0 1 1 0 V
+F V 1 - 0 0 1 1 1 1 V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 28
+
+Select move [letter][number] for BLACK: A5
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 0 - - - V
+B V 1 - 1 0 0 0 - - V
+C V 1 1 0 0 0 1 0 0 V
+D V 1 - 0 0 0 1 0 0 V
+E V 1 0 0 0 0 1 1 0 V
+F V 1 - 0 0 1 1 1 1 V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 24     WHITE: 23
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+1586 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - - V
+B V 1 - 1 0 1 1 - - V
+C V 1 1 0 1 0 1 0 0 V
+D V 1 - 1 0 0 1 0 0 V
+E V 1 1 0 0 0 1 1 0 V
+F V 1 - 0 0 1 1 1 1 V
+G V 1 - 1 0 - 1 0 - V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 30
+
+Select move [letter][number] for BLACK: G8
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - - V
+B V 1 - 1 0 1 1 - - V
+C V 1 1 0 1 0 1 0 0 V
+D V 1 - 1 0 0 1 0 0 V
+E V 1 1 0 0 0 0 1 0 V
+F V 1 - 0 0 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 22     WHITE: 27
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+429 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - - V
+B V 1 - 1 1 1 1 - - V
+C V 1 1 1 1 0 1 0 0 V
+D V 1 1 1 0 0 1 0 0 V
+E V 1 1 0 0 0 0 1 0 V
+F V 1 - 0 0 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 20     WHITE: 30
+
+Select move [letter][number] for BLACK: B2
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - - V
+B V 1 0 1 1 1 1 - - V
+C V 1 1 0 1 0 1 0 0 V
+D V 1 1 1 0 0 1 0 0 V
+E V 1 1 0 0 0 0 1 0 V
+F V 1 - 0 0 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 22     WHITE: 29
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+362 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - - V
+B V 1 0 1 1 1 1 - - V
+C V 1 1 0 1 1 1 0 0 V
+D V 1 1 1 1 0 1 0 0 V
+E V 1 1 1 0 0 0 1 0 V
+F V 1 1 1 1 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 17     WHITE: 35
+
+Select move [letter][number] for BLACK: B7
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - - V
+B V 1 0 0 0 0 0 0 - V
+C V 1 1 0 1 1 0 0 0 V
+D V 1 1 1 1 0 1 0 0 V
+E V 1 1 1 0 0 0 1 0 V
+F V 1 1 1 1 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 23     WHITE: 30
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+106 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - - V
+B V 1 1 1 1 1 1 1 1 V
+C V 1 1 0 1 1 0 1 0 V
+D V 1 1 1 1 0 1 0 0 V
+E V 1 1 1 0 0 0 1 0 V
+F V 1 1 1 1 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 16     WHITE: 38
+
+Select move [letter][number] for BLACK: A8
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 - 0 V
+B V 1 1 1 1 1 1 0 0 V
+C V 1 1 0 1 1 0 1 0 V
+D V 1 1 1 1 0 1 0 0 V
+E V 1 1 1 0 0 0 1 0 V
+F V 1 1 1 1 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 19     WHITE: 36
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+33 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V - 1 1 1 1 1 1 0 V
+B V 1 1 1 1 1 1 1 0 V
+C V 1 1 0 1 1 0 1 0 V
+D V 1 1 1 1 0 1 0 0 V
+E V 1 1 1 0 0 0 1 0 V
+F V 1 1 1 1 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 18     WHITE: 38
+
+Select move [letter][number] for BLACK: A1
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V 0 0 0 0 0 0 0 0 V
+B V 1 0 1 1 1 1 1 0 V
+C V 1 1 0 1 1 0 1 0 V
+D V 1 1 1 1 0 1 0 0 V
+E V 1 1 1 0 0 0 1 0 V
+F V 1 1 1 1 1 1 0 0 V
+G V 1 - 1 0 - 1 0 0 V
+H V - - 1 - 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 26     WHITE: 31
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+6 number of states were examined.
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V 0 0 0 0 0 0 0 0 V
+B V 1 0 1 1 1 1 1 0 V
+C V 1 1 0 1 1 0 1 0 V
+D V 1 1 1 1 0 1 0 0 V
+E V 1 1 1 0 0 0 1 0 V
+F V 1 1 1 1 1 1 0 0 V
+G V 1 - 1 1 - 1 0 0 V
+H V - - 1 1 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 25     WHITE: 33
+
+Select move [letter][number] for BLACK: H1
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V 0 0 0 0 0 0 0 0 V
+B V 0 0 1 1 1 1 1 0 V
+C V 0 1 0 1 1 0 1 0 V
+D V 0 1 1 1 0 1 0 0 V
+E V 0 1 1 0 0 0 1 0 V
+F V 0 1 1 1 1 1 0 0 V
+G V 0 - 1 1 - 1 0 0 V
+H V 0 - 1 1 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 32     WHITE: 27
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+5 number of states were examined.
+There wasn't a move available. Yielding to other player...
+Select move [letter][number] for BLACK: G2
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V 0 0 0 0 0 0 0 0 V
+B V 0 0 1 1 1 1 1 0 V
+C V 0 0 0 1 1 0 1 0 V
+D V 0 0 1 1 0 1 0 0 V
+E V 0 0 1 0 0 0 1 0 V
+F V 0 0 0 1 1 1 0 0 V
+G V 0 0 1 1 - 1 0 0 V
+H V 0 - 1 1 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 38     WHITE: 22
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+5 number of states were examined.
+There wasn't a move available. Yielding to other player...
+Select move [letter][number] for BLACK: H2
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V 0 0 0 0 0 0 0 0 V
+B V 0 0 1 1 1 1 1 0 V
+C V 0 0 0 1 1 0 1 0 V
+D V 0 0 1 1 0 1 0 0 V
+E V 0 0 1 0 0 0 1 0 V
+F V 0 0 0 0 1 1 0 0 V
+G V 0 0 0 1 - 1 0 0 V
+H V 0 0 0 0 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 43     WHITE: 18
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+5 number of states were examined.
+There wasn't a move available. Yielding to other player...
+Select move [letter][number] for BLACK: G5
+    1 2 3 4 5 6 7 8
+  V V V V V V V V V V
+A V 0 0 0 0 0 0 0 0 V
+B V 0 0 1 1 1 1 1 0 V
+C V 0 0 0 1 1 0 1 0 V
+D V 0 0 1 1 0 1 0 0 V
+E V 0 0 1 0 0 0 0 0 V
+F V 0 0 0 0 0 0 0 0 V
+G V 0 0 0 0 0 0 0 0 V
+H V 0 0 0 0 0 - 1 - V
+  V V V V V V V V V V
+BLACK: 49     WHITE: 13
+
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+7 number of states were examined.
+There wasn't a move available. Yielding to other player...
+There wasn't a move available. Yielding to other player...
+View AI move sequences? no
+Switch alpha-beta pruning? yes
+AI thinking...
+7 number of states were examined.
+There wasn't a move available. Yielding to other player...
+There wasn't a move available. Yielding to other player...
+View AI move sequences?
